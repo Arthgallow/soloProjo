@@ -1,4 +1,4 @@
-const {Validator} = require('sequelize')
+const {Validator} = require('sequelize');
 const bcrypt = require('bcryptjs');
 
 'use strict';
