@@ -46,9 +46,11 @@ const LoginFormPage = () => {
                    </label>
                    <input value={password} onChange={(event)=>setPassword(event.target.value)}>
                    </input>
+                <div>
                    <button type="submit">
                        Log In
                    </button>
+                </div>
                </div>
            </form>
        </div>
