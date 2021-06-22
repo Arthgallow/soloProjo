@@ -6,6 +6,21 @@ module.exports = (sequelize, DataTypes) => {
     mediaId: DataTypes.INTEGER,
     comment: DataTypes.TEXT
   }, {});
+
+  // Comment.newComment = async function ({userId, goalId,mediaId, comment}) {
+  //   const newComment = Comment.create({
+  //     userId,
+  //     goalId,
+  //     mediaId,
+  //     comment,
+  //   })
+  //   return newComment
+  // }
+
+
+
+
+
   Comment.associate = function(models) {
     Comment.belongsTo(models.User, {foreignKey:"userId"})
     Comment.belongsTo(models.Goal, {foreignKey:"goalId"})
