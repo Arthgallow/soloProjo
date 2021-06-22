@@ -7,6 +7,7 @@ import Navigation from "./components/Navigation";
 import SplashPage from "./components/SplashPage";
 import UserHome from "./components/UserHome";
 import * as sessionActions from "./store/session";
+import './background.css'
 
 function App() {
   const dispatch = useDispatch();
@@ -20,6 +21,7 @@ function App() {
     <>
     <Navigation isLoaded={isLoaded} />
     <Switch>
+      <div className="bg o">
       <Route path="/login">
         <LoginFormPage />
       </Route>
@@ -32,6 +34,7 @@ function App() {
       <Route>
         <UserHome path="/:userId" />
       </Route>
+      </div>
     </Switch>
     </>
   );

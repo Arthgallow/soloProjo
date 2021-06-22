@@ -11,12 +11,16 @@ const LoginFormPage = () => {
     const [password, setPassword] = useState('');
     const [errors, setErrors] = useState([]);
 
-    if(sessionUser) return(
-        <Redirect to="/" />
-    )
+    if(sessionUser){
 
-    const handleSubmit = (e) =>{
-        e.preventDefault();
+        return(
+            <Redirect to="/" />
+            )
+        }
+
+        const handleSubmit = (e) =>{
+            e.preventDefault();
+            document.querySelector(".bg").classList.remove("bg")
         return dispatch(login({credential, password}))
             .catch (async (res)=>{
                 const data = await res.json();

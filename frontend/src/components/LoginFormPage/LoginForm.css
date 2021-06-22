@@ -1,6 +1,7 @@
 
 .loginFormBoard{
     justify-self: center;
+    justify-items: center;
     border: 1px solid black;
     height:700px;
     display:grid;

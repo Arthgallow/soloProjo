@@ -13,13 +13,22 @@ const SignupFormPage = () => {
     const [confirmPassword, setConfirmPassword] = useState('')
     const [errors, setErrors] = useState([])
 
-    if(sessionUser) return (
+    const stopBackground = () => {
+       let background = document.querySelector(".bg").classList.remove("bg");
+       return background
+    }
+
+    if(sessionUser){
+        document.querySelector(".bg").classList.remove("bg");
+        return  (
         <Redirect to ="/" />
     )
+    }
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        if(password === confirmPassword){
+
+        if(password === confirmPassword && password){
             setErrors([]);
             return dispatch(signup({email, username, password}))
             .catch(async (res)=> {
@@ -28,12 +37,13 @@ const SignupFormPage = () => {
             })
         }
         return setErrors(["Tricky, Tricky, match them passwords..."])
+
     }
 
     return (
         <div className="signupFormBoard">
             <div className="signupFormBackground">
-                <form id="signupForm" onSubmit={handleSubmit} >
+                <form id="signupForm" onSubmit={handleSubmit}  >
                     <div>
                         <div className="signupFormErrorBox">
                             <ul>

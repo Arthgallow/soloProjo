@@ -1,5 +1,6 @@
 .signupFormBoard{
     justify-self: center;
+    justify-content: center;
     border: 1px solid black;
     height:700px;
     display:grid;
@@ -8,7 +9,8 @@
 
 .signupFormBackground{
     margin-top: 20px;
-    justify-self: center;
+    position: relative;
+    left:-100px;
     justify-content: center;
     border-radius: 60px;
     width: 326px;

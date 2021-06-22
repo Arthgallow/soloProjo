@@ -1,13 +1,15 @@
 import "./UserHome.css"
 
+
 const UserHome = () => {
     return (
+        <>
+        <div className="logoBox">
 
+            <img src={'../logo.png'} />
 
-        <h1>
-            User Home Page
-            <p>Back at it again you... </p>
-        </h1>
+        </div>
+        </>
     )
 }
 
