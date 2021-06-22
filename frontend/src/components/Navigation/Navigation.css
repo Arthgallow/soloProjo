@@ -1,0 +1,43 @@
+.bar{
+    font-family: 'Carter One', cursive;
+    color:rgb(230, 230, 234);
+    background-color: rgb(158, 142,178);
+    /* border: 1px solid black; */
+    height:100px;
+    display: grid;
+    grid-template-columns: 4fr 6fr 4fr;
+
+}
+/* .navBoxOne{
+    align-content: center;
+    width: 100%;
+    height: 100%;
+    background-image: url("e81718c3c7c74084bd145cfe1dca4dd1.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+} */
+
+.navLinkBoxStart{
+    margin:10px;
+    display: grid;
+}
+.navLinkBoxMiddle{
+    font-family: 'Frijole', cursive;
+    height:60px;
+    margin:10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.navLinkBoxEnd{
+    margin: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+
+
+.nav{
+    color:rgb(230, 230, 234);
+    text-decoration: none;
+}

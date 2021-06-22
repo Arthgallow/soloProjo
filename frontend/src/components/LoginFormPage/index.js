@@ -28,31 +28,47 @@ const LoginFormPage = () => {
 
     return (
 
-       <div>
-           <form onSubmit={handleSubmit}>
-               <ul>
-                   {errors.map((error, idx) => <li key={idx}>{error}</li>)}
-               </ul>
-               <div>
-                   <label>
-                        {`Email or UserName  `}
-                   </label>
-                   <input value={credential} onChange={(event)=>setCredential(event.target.value)}>
-                   </input>
-                </div>
-                <div>
-                   <label>
-                      {"Password  "}
-                   </label>
-                   <input value={password} onChange={(event)=>setPassword(event.target.value)}>
-                   </input>
-                <div>
-                   <button type="submit">
-                       Log In
-                   </button>
-                </div>
-               </div>
-           </form>
+       <div className="loginFormBoard">
+           <div className="loginFormBackground">
+                <form id="loginForm" onSubmit={handleSubmit}>
+                    <div>
+                        <div className="loginFormErrorBox">
+                            <ul>
+                                {errors.map((error, idx) => <li key={idx}>{error}</li>)}
+                            </ul>
+                        </div>
+                    </div>
+                    <div>
+                        <div className="loginFormLabelBox">
+                            <label>
+                                {`Email or UserName  `}
+                            </label>
+                        </div>
+                        <div className="loginFormInputBox">
+                            <input value={credential} onChange={(event)=>setCredential(event.target.value)}>
+                            </input>
+                        </div>
+                    </div>
+                    <div>
+                        <div className="loginFormLabelBox">
+                            <label>
+                                {"Password  "}
+                            </label>
+                        </div>
+                        <div className="loginFormInputBox">
+                            <input type="password" value={password} onChange={(event)=>setPassword(event.target.value)}>
+                            </input>
+                        </div>
+                    </div>
+                    <div>
+                        <div className="loginFormButton">
+                            <button className="btn" type="submit">
+                                Log In
+                            </button>
+                        </div>
+                    </div>
+                </form>
+           </div>
        </div>
     )
 }

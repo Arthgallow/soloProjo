@@ -1,0 +1,59 @@
+
+.loginFormBoard{
+    justify-self: center;
+    border: 1px solid black;
+    height:700px;
+    display:grid;
+    margin: 0px;
+}
+
+.loginFormBackground{
+    margin-top: 20px;
+    justify-self: center;
+    justify-content: center;
+    border-radius: 60px;
+    width: 326px;
+    height:393px;
+
+
+}
+#loginForm{
+    box-shadow: 0px 0px 10px 10px rgba(0, 117, 162, 1);
+    margin: 13px;
+    border-radius: 50px;
+    width: 300px;
+    height: 380px;
+    background-color: rgb(0, 117, 162);
+}
+.loginFormErrorBox{
+    padding-left: 60px;
+    padding-top: 10px;
+}
+.loginFormInputBox{
+    display:grid;
+    margin:10px;
+    height:30px;
+    justify-self: center;
+
+}
+
+.loginFormLabelBox{
+    font-size: 25px;
+    justify-content: center;
+    display:grid;
+    padding: 5px;
+    margin:10px;
+    justify-self: center;
+}
+
+.loginFormButton{
+    display:grid;
+    margin:10px;
+    justify-self: center;
+}
+.btn{
+    font-family: 'Lobster', cursive;
+    font-size: 30px;
+    border:none;
+    background-color: transparent;
+}

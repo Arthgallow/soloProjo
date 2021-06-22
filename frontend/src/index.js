@@ -5,6 +5,7 @@ import {BrowserRouter} from 'react-router-dom'
 
 import configureStore from './store';
 import './index.css';
+import "./reset.css"
 import App from './App';
 import { restoreCSRF, csrfFetch } from './store/csrf';
 

@@ -1,0 +1,58 @@
+.signupFormBoard{
+    justify-self: center;
+    border: 1px solid black;
+    height:700px;
+    display:grid;
+    margin: 0px;
+}
+
+.signupFormBackground{
+    margin-top: 20px;
+    justify-self: center;
+    justify-content: center;
+    border-radius: 60px;
+    width: 326px;
+    height:376px;
+
+
+}
+#signupForm{
+    box-shadow: 0px 0px 10px 10px rgba(0, 117, 162, 1);
+    margin: 13px;
+    border-radius: 50px;
+    width:500px;
+    height:650px;
+    background-color: rgb(0, 117, 162);
+}
+.signupFormErrorBox{
+    padding-left: 60px;
+    padding-top: 10px;
+}
+.signupFormInputBox{
+    display:grid;
+    margin:10px;
+    height:30px;
+    justify-self: center;
+
+}
+
+.signupFormLabelBox{
+    font-size: 25px;
+    justify-content: center;
+    display:grid;
+    padding: 5px;
+    margin:10px;
+    justify-self: center;
+}
+
+.signupFormButton{
+    display:grid;
+    margin:10px;
+    justify-self: center;
+}
+.btn{
+    font-family: 'Lobster', cursive;
+    font-size: 30px;
+    border:none;
+    background-color: transparent;
+}
