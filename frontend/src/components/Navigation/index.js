@@ -3,6 +3,7 @@ import { useDispatch , useSelector } from 'react-redux'
 import { logout } from "../../store/session";
 import ProfileButton from "./ProfileButton";
 import './Navigation.css'
+import logo from "../logo.png"
 
 
 
@@ -11,9 +12,9 @@ const Navigation = ({isLoaded}) => {
     let sessionLinksMiddle;
     let sessionLinksEnd;
     let sessionLinkStart = (
-        <img src="e81718c3c7c74084bd145cfe1dca4dd1.png"/>
+        <img src={logo}/>
     )
-        
+
     if (sessionUser){
         sessionLinksMiddle= (
             <div className="navLinkBoxMiddle">

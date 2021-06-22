@@ -1,11 +1,17 @@
 'use strict';
 module.exports = (sequelize, DataTypes) => {
   const Goal = sequelize.define('Goal', {
-    userId: DataTypes.INTEGER,
-    title: DataTypes.STRING
+    userid: DataTypes.INTEGER,
+    title: DataTypes.STRING,
+    description: DataTypes.TEXT
   }, {});
   Goal.associate = function(models) {
-    // associations can be defined here
+
+    Goal.hasMany(models.Comment, {foreignKey: 'goalId'});
+    Goal.hasMany(models.Media,   {foreignKey: 'goalId'});
+    Goal.belongsTo(models.User,  {foreignKey: 'userId'});
+    Goal.belongsTo(models.Group, {foreignKey: 'goalId'});
+
+    return Goal;
   };
-  return Goal;
 };

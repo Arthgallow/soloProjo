@@ -9,28 +9,31 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       groupName: {
-        type: Sequelize.STRING(30)
+        allowNull: false,
+        type: Sequelize.STRING(50)
+      },
+      description: {
+        allowNull: false,
+        type: Sequelize.TEXT
       },
       userId: {
-        type: Sequelize.INTEGER,
         allowNull: false,
-        references: {model: 'Users'}
-      },
-      goalsId: {
         type: Sequelize.INTEGER
       },
-      content: {
-        type: Sequelize.TEXT
+      goalId: {
+        allowNull: false,
+        type: Sequelize.INTEGER
       },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE,
-        defaultValue: Sequelize.fn('now'),
+         defaultValue: Sequelize.fn('now'),
+
       },
       updatedAt: {
         allowNull: false,
         type: Sequelize.DATE,
-        defaultValue: Sequelize.fn('now'),
+         defaultValue: Sequelize.fn('now'),
       }
     });
   },

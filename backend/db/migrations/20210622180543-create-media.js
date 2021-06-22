@@ -1,18 +1,18 @@
 'use strict';
 module.exports = {
   up: (queryInterface, Sequelize) => {
-    return queryInterface.createTable('Comments', {
+    return queryInterface.createTable('Media', {
       id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      userId: {
+      mediaName: {
         allowNull: false,
-        type: Sequelize.INTEGER
+        type: Sequelize.STRING(100)
       },
-      mediaId: {
+      userId: {
         allowNull: false,
         type: Sequelize.INTEGER
       },
@@ -20,23 +20,27 @@ module.exports = {
         allowNull: false,
         type: Sequelize.INTEGER
       },
-      comment: {
+      mediaUrl: {
+        allowNull: false,
+        type: Sequelize.STRING(1000)
+      },
+      content: {
         allowNull: false,
         type: Sequelize.TEXT
       },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE,
-        defaultValue: Sequelize.fn('now'),
+         defaultValue: Sequelize.fn('now'),
       },
       updatedAt: {
         allowNull: false,
         type: Sequelize.DATE,
-        defaultValue: Sequelize.fn('now'),
+         defaultValue: Sequelize.fn('now'),
       }
     });
   },
   down: (queryInterface, Sequelize) => {
-    return queryInterface.dropTable('Comments');
+    return queryInterface.dropTable('Media');
   }
 };

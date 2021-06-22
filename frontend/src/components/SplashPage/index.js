@@ -1,12 +1,17 @@
 import './SplashPage.css'
+import logo from "../logo.png"
+
+
 const SplashPage = () => {
     return (
-        <div className="lg">
+        <div className="logoBox">
         <h1>
-            Tis only but a scratch...
+            tis only but a scratch
         </h1>
 
-        </div>
+        <img src={logo} />
+
+    </div>
 
     );
 

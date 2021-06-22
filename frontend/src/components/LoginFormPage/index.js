@@ -20,7 +20,6 @@ const LoginFormPage = () => {
 
         const handleSubmit = (e) =>{
             e.preventDefault();
-            document.querySelector(".bg").classList.remove("bg")
         return dispatch(login({credential, password}))
             .catch (async (res)=>{
                 const data = await res.json();

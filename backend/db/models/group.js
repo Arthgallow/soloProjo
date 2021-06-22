@@ -2,12 +2,17 @@
 module.exports = (sequelize, DataTypes) => {
   const Group = sequelize.define('Group', {
     groupName: DataTypes.STRING,
+    description: DataTypes.TEXT,
     userId: DataTypes.INTEGER,
-    goalsId: DataTypes.INTEGER,
-    content: DataTypes.TEXT
+    goalId: DataTypes.INTEGER
   }, {});
   Group.associate = function(models) {
-    // associations can be defined here
+    Group.hasMany(models.User, {
+      through: "userGroups",
+      as:"groups",
+      foreignKey:'groupId'
+    });
+    Group.hasMany(models.Goal, {foreignKey:"goalId"})
   };
   return Group;
 };

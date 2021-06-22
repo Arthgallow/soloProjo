@@ -33,9 +33,12 @@ export const signup = (user) => async (dispatch) => {
         headers: {"Content-Type": "application/json"},
         body: JSON.stringify({email, username, password})
     });
-    const data = await response.json();
-    dispatch(setUser(data.user))
-    return response
+    if(response.ok){
+        const data = await response.json();
+        document.querySelector(".bg").classList.remove("bg")
+        dispatch(setUser(data.user))
+        return response
+    }
 
 }
 
@@ -46,10 +49,13 @@ export const login = (user) => async (dispatch) => {
         headers: {"Content-Type": "application/json"},
         body: JSON.stringify({credential, password})
     });
+    if(response.ok) {
+        const data = await response.json()
+        dispatch(setUser(data.user))
+        document.querySelector(".bg").classList.remove("bg")
+        return response
 
-    const data = await response.json()
-    dispatch(setUser(data.user))
-    return response
+    }
 };
 
 export const restoreUser = () => async dispatch => {
