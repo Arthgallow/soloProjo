@@ -7,11 +7,7 @@ module.exports = (sequelize, DataTypes) => {
     goalId: DataTypes.INTEGER
   }, {});
   Group.associate = function(models) {
-    Group.hasMany(models.User, {
-      // through: "userGroups",
-      // as:"groups",
-      foreignKey:'groupId'
-    });
+    Group.hasMany(models.UserGroups, {foreignKey:'groupId'});
     Group.hasMany(models.Goal, {foreignKey:"goalId"})
   };
   return Group;
