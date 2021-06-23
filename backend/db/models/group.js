@@ -8,8 +8,8 @@ module.exports = (sequelize, DataTypes) => {
   }, {});
   Group.associate = function(models) {
     Group.hasMany(models.User, {
-      through: "userGroups",
-      as:"groups",
+      // through: "userGroups",
+      // as:"groups",
       foreignKey:'groupId'
     });
     Group.hasMany(models.Goal, {foreignKey:"goalId"})

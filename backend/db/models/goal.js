@@ -12,6 +12,6 @@ module.exports = (sequelize, DataTypes) => {
     Goal.belongsTo(models.User,  {foreignKey: 'userId'});
     Goal.belongsTo(models.Group, {foreignKey: 'goalId'});
 
-    return Goal;
   };
+  return Goal;
 };

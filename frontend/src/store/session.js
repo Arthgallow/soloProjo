@@ -35,8 +35,8 @@ export const signup = (user) => async (dispatch) => {
     });
     if(response.ok){
         const data = await response.json();
-        document.querySelector(".bg").classList.remove("bg")
         dispatch(setUser(data.user))
+        document.querySelector(".bg").classList.remove("bg")
         return response
     }
 
@@ -54,7 +54,6 @@ export const login = (user) => async (dispatch) => {
         dispatch(setUser(data.user))
         document.querySelector(".bg").classList.remove("bg")
         return response
-
     }
 };
 

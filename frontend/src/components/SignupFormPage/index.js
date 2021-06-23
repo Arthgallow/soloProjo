@@ -13,15 +13,11 @@ const SignupFormPage = () => {
     const [confirmPassword, setConfirmPassword] = useState('')
     const [errors, setErrors] = useState([])
 
-    const stopBackground = () => {
-       let background = document.querySelector(".bg").classList.remove("bg");
-       return background
-    }
 
     if(sessionUser){
         document.querySelector(".bg").classList.remove("bg");
         return  (
-        <Redirect to ="/" />
+        <Redirect exact to ="/" />
     )
     }
 

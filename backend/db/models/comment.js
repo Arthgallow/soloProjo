@@ -7,15 +7,20 @@ module.exports = (sequelize, DataTypes) => {
     comment: DataTypes.TEXT
   }, {});
 
-  // Comment.newComment = async function ({userId, goalId,mediaId, comment}) {
-  //   const newComment = Comment.create({
-  //     userId,
-  //     goalId,
-  //     mediaId,
-  //     comment,
-  //   })
-  //   return newComment
-  // }
+  Comment.newComment = async function ({userId, goalId,mediaId, comment}) {
+    const newComment = Comment.create({
+      userId,
+      goalId,
+      mediaId,
+      comment,
+    })
+    return newComment
+  }
+
+  Comment.getComment = async function(id){
+    const comment = Comment.findByPk(id)
+    return comment
+  }
 
 
 

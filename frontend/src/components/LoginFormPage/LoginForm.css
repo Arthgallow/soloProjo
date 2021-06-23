@@ -2,7 +2,6 @@
 .loginFormBoard{
     justify-self: center;
     justify-items: center;
-    border: 1px solid black;
     height:700px;
     display:grid;
     margin: 0px;
@@ -19,12 +18,13 @@
 
 }
 #loginForm{
-    box-shadow: 0px 0px 10px 10px rgba(0, 117, 162, 1);
+    color: white;
+    box-shadow: 0px 0px 10px 10px rgba(186, 45, 11, 1);
     margin: 13px;
     border-radius: 50px;
     width: 300px;
     height: 380px;
-    background-color: rgb(0, 117, 162);
+    background-color: rgba(0, 117, 162, 0.3);
 }
 .loginFormErrorBox{
     padding-left: 60px;
@@ -53,6 +53,7 @@
     justify-self: center;
 }
 .btn{
+    color: white;
     font-family: 'Lobster', cursive;
     font-size: 30px;
     border:none;

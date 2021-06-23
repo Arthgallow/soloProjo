@@ -12,7 +12,10 @@ const Navigation = ({isLoaded}) => {
     let sessionLinksMiddle;
     let sessionLinksEnd;
     let sessionLinkStart = (
-        <img src={logo}/>
+        <>
+            <img clsassName="logoImgNav" src={logo}/>
+            <h1 className='logoNav'>Proof or False</h1>
+        </>
     )
 
     if (sessionUser){
@@ -36,7 +39,7 @@ const Navigation = ({isLoaded}) => {
         sessionLinksEnd = (
             <div className="navLinkBoxEnd">
                 <p className="navBoxlogin">
-                    <div>empty</div>
+                    <div></div>
                 </p>
                 <p className="navBoxSignup">
                     <ProfileButton user={sessionUser} />
@@ -50,10 +53,10 @@ const Navigation = ({isLoaded}) => {
                     <NavLink className="navHome nav" exact to="/">Home</NavLink>
                 </p>
                 <p>
-                    <div>empty</div>
+                    <div></div>
                 </p>
                 <p>
-                    <div>empty</div>
+                    <div></div>
                 </p>
                 <p>
                     <div>Search</div>
