@@ -25,7 +25,7 @@ const Navigation = ({isLoaded}) => {
                     <NavLink className="navHome nav"  to={`/${sessionUser.id}`}>Home</NavLink>
                 </p>
                 <p>
-                    <div>Groups</div>
+                    <NavLink className="navGroup nav" to={`/groups`}>Groups</NavLink>
                 </p>
                 <p>
                     <div>Goals</div>
@@ -39,13 +39,18 @@ const Navigation = ({isLoaded}) => {
         sessionLinksEnd = (
             <div className="navLinkBoxEnd">
                 <p className="navBoxlogin">
-                    <div></div>
+                Welcom Back {sessionUser.username}!
                 </p>
                 <p className="navBoxSignup">
-                    <ProfileButton user={sessionUser} />
-                </p>
+                    <NavLink className="navLogout nav" exact to="/woeswererrwerwe">
+                        <button type="submit" onClick={logout(sessionUser)}>LogOut</button>
+                    </NavLink>
+
+
+                </p >
             </div>
         )
+        console.log(sessionUser)
     } else {
         sessionLinksMiddle = (
             <div className="navLinkBoxMiddle">

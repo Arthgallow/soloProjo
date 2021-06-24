@@ -1,0 +1,46 @@
+#groupPageBox{
+    width:100%
+    ;
+    position:fixed;
+    background-color: peachpuff;
+    display: grid;
+    grid-template-areas:
+    "sideBar groupsPage ";
+
+}
+.groupsBoard{
+    grid-area: "groupPage";
+    width: 1000px;
+    height: 800px;
+    margin:40px;
+    border: 1px solid black;
+    display: flex;
+    flex-flow: wrap;
+    align-content: space-around;
+    overflow: hidden;
+}
+
+.groupCard{
+    position:static;
+    background-color:yellow;
+    margin:20px;
+    border: 1px solid black;
+    height: 200px;
+    width: 200px;
+    display:grid;
+    grid-template-rows: 1fr 2fr;
+}
+
+.cardName{
+    border: 1px solid black;
+}
+.cardDescription{
+    border: 1px solid black;
+    height: 200px;
+    width: 200px;
+}
+#sidePannel{
+    border: 1px solid black;
+    margin: 40px;
+    grid-area: "groupsPage";
+}

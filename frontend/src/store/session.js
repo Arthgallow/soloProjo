@@ -14,6 +14,8 @@ const setUser = (user)=>{
 const removeUser = ()=>{
     return{
         type: REMOVE_USER,
+
+
     }
 }
 
@@ -22,7 +24,8 @@ export const logout = () => async (dispatch) => {
     const response = await csrfFetch('/api/session', {
         method: 'DELETE'
     });
-    dispatch(removeUser())
+    // console.log("res: ", response)
+    // dispatch(removeUser())
     return response
 }
 
@@ -35,8 +38,8 @@ export const signup = (user) => async (dispatch) => {
     });
     if(response.ok){
         const data = await response.json();
-        dispatch(setUser(data.user))
         document.querySelector(".bg").classList.remove("bg")
+        dispatch(setUser(data.user))
         return response
     }
 
@@ -74,7 +77,8 @@ const sessionReducer = (state = initialState, action) => {
             newState.user = action.payload
             return newState
         case REMOVE_USER:
-            newState = Object.assign({}, state)
+            newState = {user:null}
+
             return newState
         default:
             return state

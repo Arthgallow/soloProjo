@@ -14,8 +14,8 @@ const LoginFormPage = () => {
     if(sessionUser){
 
         return(
-            <Redirect to="/" />
-            )
+            <Redirect to={`/${sessionUser.id}`} />
+            );
         }
 
         const handleSubmit = (e) =>{
@@ -28,12 +28,13 @@ const LoginFormPage = () => {
 
 
     }
+    
 
     return (
 
        <div className="loginFormBoard">
            <div className="loginFormBackground">
-                <form id="loginForm" onSubmit={handleSubmit}>
+                <form  id="loginForm" onSubmit={handleSubmit}>
                     <div>
                         <div className="loginFormErrorBox">
                             <ul>

@@ -15,9 +15,9 @@ const SignupFormPage = () => {
 
 
     if(sessionUser){
-        document.querySelector(".bg").classList.remove("bg");
+
         return  (
-        <Redirect exact to ="/" />
+        <Redirect exact to ={`/${sessionUser.id}`} />
     )
     }
 

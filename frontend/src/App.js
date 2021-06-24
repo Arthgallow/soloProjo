@@ -4,8 +4,10 @@ import { Switch, Route } from "react-router-dom";
 import LoginFormPage from "./components/LoginFormPage";
 import SignupFormPage from "./components/SignupFormPage"
 import Navigation from "./components/Navigation";
+import Groups from "./components/Groups";
 import SplashPage from "./components/SplashPage";
 import UserHome from "./components/UserHome";
+import GroupId from "./components/GroupId";
 import * as sessionActions from "./store/session";
 import './background.css'
 
@@ -22,22 +24,33 @@ function App() {
   return  isLoaded && (
     <>
     <Navigation isLoaded={isLoaded} />
+    <div  className="bg o">
     <Switch>
-      <div className="bg o">
-      <Route path="/login">
+      <Route exact path="/login">
         <LoginFormPage />
       </Route>
-      <Route path="/signup">
-         <SignupFormPage />
+      <Route  exact path="/signup">
+        <SignupFormPage  />
       </Route>
       <Route exact path="/">
-        <SplashPage />
+        <SplashPage  />
       </Route>
-      </div>
+      <Route exact path="/groups" >
+        <Groups  />
+      </Route>
+      <Route  exact path="/:userdId" >
+        <UserHome />
+      </Route>
+      <Route exact path="/groups/:groupId">
+        <GroupId />
+      </Route>
       <Route>
-        <UserHome exact path="/:userId" />
+        Sorry Charlie, Tis Not for Doin...
       </Route>
+
     </Switch>
+      </div>
+
     </>
   );
 }

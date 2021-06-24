@@ -32,7 +32,7 @@ function ProfileButton({ user }) {
 
   return (
     <>
-      <button className="btn" onClick={openMenu}>
+      <button className="" onClick={openMenu}>
         <div>
         <i className="fas fa-bomb"></i>
         </div>
