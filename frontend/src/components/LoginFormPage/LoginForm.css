@@ -13,18 +13,18 @@
     justify-content: center;
     border-radius: 60px;
     width: 326px;
-    height:393px;
+    height:406px;
 
 
 }
 #loginForm{
     color: white;
-    box-shadow: 0px 0px 10px 10px rgba(186, 45, 11, 1);
     margin: 13px;
     border-radius: 50px;
     width: 300px;
     height: 380px;
-    background-color: rgba(0, 117, 162, 0.3);
+    box-shadow: 0px 0px 10px 10px rgba(238, 198, 67, 1);
+    background-color: rgba(13, 33, 161, 0.3);
 }
 .loginFormErrorBox{
     padding-left: 60px;

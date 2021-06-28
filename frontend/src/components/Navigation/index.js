@@ -1,13 +1,14 @@
-import { NavLink } from "react-router-dom"
+import { NavLink, Redirect } from "react-router-dom"
 import { useDispatch , useSelector } from 'react-redux'
 import { logout } from "../../store/session";
 import ProfileButton from "./ProfileButton";
 import './Navigation.css'
-import logo from "../logo.png"
+import logo from "../logo(2).png"
 
 
 
 const Navigation = ({isLoaded}) => {
+    let dispatch = useDispatch();
     const sessionUser = useSelector(state=>state.session.user);
     let sessionLinksMiddle;
     let sessionLinksEnd;
@@ -21,17 +22,15 @@ const Navigation = ({isLoaded}) => {
     if (sessionUser){
         sessionLinksMiddle= (
             <div className="navLinkBoxMiddle">
-                <p>
-                    <NavLink className="navHome nav"  to={`/${sessionUser.id}`}>Home</NavLink>
-                </p>
+
                 <p>
                     <NavLink className="navGroup nav" to={`/groups`}>Groups</NavLink>
                 </p>
+
                 <p>
-                    <div>Goals</div>
-                </p>
-                <p>
-                    <div>Search</div>
+                    <input
+                    placeholder="Search"
+                    />
                 </p>
             </div>
         )
@@ -42,29 +41,29 @@ const Navigation = ({isLoaded}) => {
                 Welcom Back {sessionUser.username}!
                 </p>
                 <p className="navBoxSignup">
-                    <NavLink className="navLogout nav" exact to="/woeswererrwerwe">
-                        <button type="submit" onClick={logout(sessionUser)}>LogOut</button>
+                    <NavLink className="navLogout nav" exact to="/groups">
+                        <button type="submit" onClick={(e)=>{
+                            // e.preventDefault();
+                            dispatch(logout());
+                            }}>LogOut</button>
                     </NavLink>
 
 
                 </p >
             </div>
         )
-        console.log(sessionUser)
+
     } else {
         sessionLinksMiddle = (
             <div className="navLinkBoxMiddle">
-                <p>
-                    <NavLink className="navHome nav" exact to="/">Home</NavLink>
+                   <p>
+                    <NavLink className="navGroup nav" to={`/groups`}>Groups</NavLink>
                 </p>
+
                 <p>
-                    <div></div>
-                </p>
-                <p>
-                    <div></div>
-                </p>
-                <p>
-                    <div>Search</div>
+                    <input
+                    placeholder="Search"
+                    />
                 </p>
             </div>
         )
@@ -72,10 +71,10 @@ const Navigation = ({isLoaded}) => {
 
             <div className="navLinkBoxEnd">
                 <p className="navBoxlogin">
-                    <NavLink className="loginNavLink nav" to='/login'>Welcom back loser</NavLink>
+                    <NavLink className="loginNavLink nav" to='/login'>Log In</NavLink>
                 </p>
                 <p className="navBoxSignup">
-                    <NavLink className="navSignup nav " to='/signup'>Join the dark side</NavLink>
+                    <NavLink className="navSignup nav " to='/signup'>Join</NavLink>
                 </p>
             </div>
         )

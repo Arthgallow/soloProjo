@@ -11,6 +11,7 @@ module.exports = (sequelize, DataTypes) => {
     Media.hasMany(models.Comment, {foreignKey:"mediaId"})
     Media.belongsTo(models.User,{foreignKey:"userId"})
     Media.belongsTo(models.Goal,{foreignKey:"goalId"})
+    Media.belongsTo(models.Group, {foreignKey: "mediaId"})
   };
   return Media;
 };

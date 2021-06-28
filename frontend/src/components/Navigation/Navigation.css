@@ -1,27 +1,27 @@
 .bar{
     font-family: 'Carter One', cursive;
-    color:rgb(230, 230, 234);
-    background-color: rgb(158, 142,178);
-    border: 1px solid black;
+    color:rgb(238, 240, 242);
+    background-color: rgb(20, 20, 20);
+    /* border: 1px solid black; */
     height:100px;
     display: grid;
     grid-template-columns: 4fr 6fr 4fr;
 
 }
 .navBoxOne{
-    border:1px solid black;
+    /* border:1px solid black; */
     display: flex;
     align-content: center;
-   height:100px
+    height:100px
 }
 
 .navLinkBoxStart{
-    border:1px solid black;
+    /* border:1px solid black; */
     margin:10px;
     display: grid;
 }
 .navLinkBoxMiddle{
-    border:1px solid black;
+    /* border:1px solid black; */
     font-family: 'Frijole', cursive;
     height:60px;
     margin:10px;
@@ -29,19 +29,19 @@
     grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 .navLinkBoxEnd{
-    border:1px solid black;
+    /* border:1px solid black; */
     margin: 10px;
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
 
 .logoNav{
-    border:1px solid black;
+    /* border:1px solid black; */
     padding-top:20px;
     height:Text 70px;
 }
 .nav{
-    border:1px solid black;
+    /* border:1px solid black; */
     color:rgb(230, 230, 234);
     text-decoration: none;
 }

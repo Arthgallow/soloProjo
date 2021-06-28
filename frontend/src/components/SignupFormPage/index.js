@@ -27,10 +27,10 @@ const SignupFormPage = () => {
         if(password === confirmPassword && password){
             setErrors([]);
             return dispatch(signup({email, username, password}))
-            .catch(async (res)=> {
-                const data = await res.json();
-                if(data && data.errors) setErrors(data.errors)
-            })
+            // .catch(async (res)=> {
+            //     const data = await res.json();
+            //     if(data && data.errors) setErrors(data.errors)
+            // })
         }
         return setErrors(["Tricky, Tricky, match them passwords..."])
 

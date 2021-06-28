@@ -1,7 +1,7 @@
 import React,{useState} from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { Redirect } from 'react-router-dom';
-import { login } from '../../store/session'
+import * as sessionActions from '../../store/session'
 import './LoginForm.css'
 
 const LoginFormPage = () => {
@@ -14,21 +14,20 @@ const LoginFormPage = () => {
     if(sessionUser){
 
         return(
-            <Redirect to={`/${sessionUser.id}`} />
+            <Redirect to={`/groups`} />
             );
         }
 
-        const handleSubmit = (e) =>{
-            e.preventDefault();
-        return dispatch(login({credential, password}))
-            .catch (async (res)=>{
-                const data = await res.json();
-                if(data && data.errors) setErrors(data.errors)
-            })
-
-
+    const handleSubmit = (e) =>{
+        e.preventDefault();
+        setErrors([])
+        return dispatch(sessionActions.login({ credential, password })) && <Redirect to="/groups"/>
+            // .catch (async (res)=>{
+            //     const data = await res.json();
+            //     if(data && data.errors) setErrors(data.errors)
+            // })
     }
-    
+
 
     return (
 

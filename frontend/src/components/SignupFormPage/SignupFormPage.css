@@ -19,12 +19,12 @@
 }
 #signupForm{
     color: white;
-    box-shadow: 0px 0px 10px 10px rgba(186, 45, 11, 1);
     margin: 13px;
     border-radius: 50px;
     width:500px;
     height:600px;
-    background-color: rgb(0, 117, 162, 0.3);
+    background-color: rgba(13, 33, 161, 0.3);
+    box-shadow: 0px 0px 10px 10px rgba(238, 198, 67, 1);
 }
 .signupFormErrorBox{
     padding-left: 60px;

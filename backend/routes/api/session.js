@@ -21,6 +21,7 @@ const validateLogin = [
 ];
 
 
+
 // Log in
 router.post(
   '/',
@@ -45,6 +46,8 @@ router.post(
     });
   }),
 );
+
+
 
 // Log out
 router.delete(

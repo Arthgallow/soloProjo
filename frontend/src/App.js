@@ -6,8 +6,9 @@ import SignupFormPage from "./components/SignupFormPage"
 import Navigation from "./components/Navigation";
 import Groups from "./components/Groups";
 import SplashPage from "./components/SplashPage";
-import UserHome from "./components/UserHome";
 import GroupId from "./components/GroupId";
+import NewComment from "./components/NewComment";
+import Comments from "./components/Comments";
 import * as sessionActions from "./store/session";
 import './background.css'
 
@@ -24,7 +25,7 @@ function App() {
   return  isLoaded && (
     <>
     <Navigation isLoaded={isLoaded} />
-    <div  className="bg o">
+    <div  id="splachBackground" className="bg o">
     <Switch>
       <Route exact path="/login">
         <LoginFormPage />
@@ -38,13 +39,11 @@ function App() {
       <Route exact path="/groups" >
         <Groups  />
       </Route>
-      <Route  exact path="/:userdId" >
-        <UserHome />
-      </Route>
       <Route exact path="/groups/:groupId">
         <GroupId />
       </Route>
-      <Route>
+
+      <Route >
         Sorry Charlie, Tis Not for Doin...
       </Route>
 
